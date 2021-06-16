@@ -1,3 +1,12 @@
 C/C++配置
 【C8T6】		STM32F10X_MD
 【VET6/ZET6】	STM32F10X_HD
+
+
+需要准备的程序
+直流电机驱动和编码器
+步进电机
+定时器中断
+MPU6050
+屏幕、按键
+ADC、I2C、SPI、USART
