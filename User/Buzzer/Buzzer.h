@@ -1,11 +1,11 @@
-#ifndef BUZZER_H
-#define BUZZER_H
+#ifndef Buzzer_H
+#define Buzzer_H
 
 
 #include "stm32f10x.h"
 
 
-//A8 接 蜂鸣器 正极；高电平 响
+//PA8 接 蜂鸣器 正极；高电平 响
 #define     BUZZER_GPIO_CLK     RCC_APB2Periph_GPIOA
 #define     BUZZER_GPIO_PIN     GPIO_Pin_8
 #define     BUZZER_GPIO_PORT    GPIOA
@@ -16,5 +16,5 @@
 
 void BUZZER_GPIO_Config( void );
 
-#endif /*BUZZER_H*/
+#endif /*Buzzer_H*/
 

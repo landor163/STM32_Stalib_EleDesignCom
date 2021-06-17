@@ -1,2 +1,16 @@
-Load "..\\Output\\STM32_StandardLibrary.axf" 
-Erase Done.Programming Done.Verify OK.Flash Load finished at 17:25:54
+*** Using Compiler 'V5.06 update 6 (build 750)', folder: 'D:\017_Keil_MDK-ARM_V5.26\ARM\ARMCC\Bin'
+Build target 'STM32_StandardLibrary'
+compiling stm32f10x_it.c...
+..\User\Main\stm32f10x_it.c(141): error:  #20: identifier "KEY1_INT_EXTI_LINE" is undefined
+        if(EXTI_GetITStatus(KEY1_INT_EXTI_LINE) != RESET) //确保是否产生�? Exti 中断
+..\User\Main\stm32f10x_it.c(143): error:  #20: identifier "ON" is undefined
+                ON;
+..\User\Main\stm32f10x_it.c(148): error:  #247: function "KEY2_IRQHandler"  has already been defined
+  void KEY2_IRQHandler(void)
+..\User\Main\stm32f10x_it.c(151): error:  #20: identifier "KEY2_INT_EXTI_LINE" is undefined
+        if(EXTI_GetITStatus(KEY2_INT_EXTI_LINE) != RESET)  //确保是否产生�? Exti 中断
+..\User\Main\stm32f10x_it.c(154): error:  #20: identifier "OFF" is undefined
+                OFF;
+..\User\Main\stm32f10x_it.c: 0 warnings, 5 errors
+"..\Output\STM32_StandardLibrary.axf" - 5 Error(s), 0 Warning(s).
+Target not created.

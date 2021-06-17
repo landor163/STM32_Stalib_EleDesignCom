@@ -136,6 +136,28 @@ void SysTick_Handler(void)
 {
 }
 
+void KEY2_IRQHandler(void)
+{
+	if(EXTI_GetITStatus(KEY1_INT_EXTI_LINE) != RESET) //确保是否产生了 Exti 中断
+	{	
+		ON;
+    
+		EXTI_ClearITPendingBit(KEY1_INT_EXTI_LINE);//清除中断标志位  
+	}  
+}
+
+void KEY2_IRQHandler(void)
+{
+
+	if(EXTI_GetITStatus(KEY2_INT_EXTI_LINE) != RESET)  //确保是否产生了 Exti 中断
+	{
+
+		OFF;
+
+		EXTI_ClearITPendingBit(KEY2_INT_EXTI_LINE);   //清除中断标志位    
+	}  
+}
+
 /******************************************************************************/
 /*                 STM32F10x Peripherals Interrupt Handlers                   */
 /*  Add here the Interrupt Handler for the used peripheral(s) (PPP), for the  */

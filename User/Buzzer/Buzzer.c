@@ -1,9 +1,22 @@
+/*
+GPIO输出
+
+标准库函数对每个外设都建立了一个初始化结构体，就像这个样子 GPIO_InitTypeDef；应该在标准 GPIO.h 里面；
+
+要点：
+    使能 GPIO 端口时钟；
+    初始化 GPIO 目标引脚为 推挽输出模式；
+
+PA8 接 蜂鸣器 正极；GND 接 蜂鸣器 负极；
+*/
+
+
 #include "Buzzer.h"
 
 
 void BUZZER_GPIO_Config( void )
 {
-    GPIO_InitTypeDef GPIO_InitStructure;                //定义一个 GPIO_InitTypeDef类型的 结构体
+    GPIO_InitTypeDef GPIO_InitStructure;                //定义一个 GPIO_InitTypeDef 类型的 结构体;
 
     RCC_APB2PeriphClockCmd( BUZZER_GPIO_CLK , ENABLE );     //打开 控制蜂鸣器的GPIO的端口 时钟
 

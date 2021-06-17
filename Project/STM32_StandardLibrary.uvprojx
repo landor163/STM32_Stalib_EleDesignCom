@@ -370,7 +370,7 @@
               <MiscControls></MiscControls>
               <Define>STM32F10X_HD,USE_STDPERIPH_DRIVER</Define>
               <Undefine></Undefine>
-              <IncludePath>..\Libraries\CMSIS;..\Libraries\STM32F10x_StdPeriph_Driver\inc;..\User\Main;..\User\Buzzer</IncludePath>
+              <IncludePath>..\Libraries\CMSIS;..\Libraries\STM32F10x_StdPeriph_Driver\inc;..\User\Main;..\User\Buzzer;..\User\Exti</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -572,6 +572,11 @@
               <FileName>Buzzer.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\User\Buzzer\Buzzer.c</FilePath>
+            </File>
+            <File>
+              <FileName>Exti.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\User\Exti\Exti.c</FilePath>
             </File>
           </Files>
         </Group>
