@@ -2,12 +2,12 @@
 #include "Buzzer.h"
 
 
-int main (void)
+int main ( void )
 {
-	BUZZER_GPIO_Config();
-    while(1)
+	BUZZER_GPIO_Config(  );       //蜂鸣器
+    while( 1 )
     {
-        
+        //ON;     //蜂鸣器
     }
 }
 
