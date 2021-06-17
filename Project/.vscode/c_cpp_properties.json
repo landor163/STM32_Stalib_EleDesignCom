@@ -6,6 +6,7 @@
                 "d:\\001_Main\\006_STM32_Stalib_EleDesignCom\\Libraries\\CMSIS",
                 "d:\\001_Main\\006_STM32_Stalib_EleDesignCom\\Libraries\\STM32F10x_StdPeriph_Driver\\inc",
                 "d:\\001_Main\\006_STM32_Stalib_EleDesignCom\\User\\Main",
+                "d:\\001_Main\\006_STM32_Stalib_EleDesignCom\\User\\Buzzer",
                 "D:\\017_Keil_MDK-ARM_V5.26\\ARM\\ARMCC\\include",
                 "D:\\017_Keil_MDK-ARM_V5.26\\ARM\\ARMCC\\include\\rw",
                 "d:\\001_Main\\006_STM32_Stalib_EleDesignCom\\Libraries\\CMSIS\\startup",
