@@ -14,6 +14,7 @@
 #include "stm32f10x.h"
 #include "Buzzer.h"
 #include "Exti.h"
+#include"Key.h"
 
 
 int main(void)
@@ -23,6 +24,11 @@ int main(void)
     while(1)
     {
         OFF;
+
+        if( Key_Scan(KEY1_GPIO_PORT,KEY1_GPIO_PIN) == KEY_ON )
+		{
+            OFF;
+		}
     }
 }
 
