@@ -16,6 +16,7 @@
 #include "Exti.h"
 #include "Key.h"
 #include "SysTick.h"
+#include "Usart.h"
 
 
 int main(void)
@@ -23,6 +24,7 @@ int main(void)
     BUZZER_GPIO_Config();
     EXTI_Key_Config();
     SysTick_Init();
+    USART_Config();
     while(1)
     {
         OFF;

@@ -370,7 +370,7 @@
               <MiscControls></MiscControls>
               <Define>STM32F10X_HD,USE_STDPERIPH_DRIVER</Define>
               <Undefine></Undefine>
-              <IncludePath>..\Libraries\CMSIS;..\Libraries\STM32F10x_StdPeriph_Driver\inc;..\User\Main;..\User\Buzzer;..\User\Exti;..\User\Key;..\User\SysTick</IncludePath>
+              <IncludePath>..\Libraries\CMSIS;..\Libraries\STM32F10x_StdPeriph_Driver\inc;..\User\Main;..\User\Buzzer;..\User\Exti;..\User\Key;..\User\SysTick;..\User\Usart</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -587,6 +587,11 @@
               <FileName>SysTick.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\User\SysTick\SysTick.c</FilePath>
+            </File>
+            <File>
+              <FileName>Usart.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\User\Usart\Usart.c</FilePath>
             </File>
           </Files>
         </Group>

@@ -32,3 +32,5 @@
 ..\output\main.o: ..\User\Exti\Exti.h
 ..\output\main.o: ..\User\Key\Key.h
 ..\output\main.o: ..\User\SysTick\SysTick.h
+..\output\main.o: ..\User\Usart\Usart.h
+..\output\main.o: D:\017_Keil_MDK-ARM_V5.26\ARM\ARMCC\Bin\..\include\stdio.h
