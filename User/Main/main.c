@@ -14,13 +14,15 @@
 #include "stm32f10x.h"
 #include "Buzzer.h"
 #include "Exti.h"
-#include"Key.h"
+#include "Key.h"
+#include "SysTick.h"
 
 
 int main(void)
 {
     BUZZER_GPIO_Config();
     EXTI_Key_Config();
+    SysTick_Init();
     while(1)
     {
         OFF;
