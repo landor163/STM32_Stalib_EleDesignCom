@@ -5,8 +5,7 @@
 #include "stm32f10x.h"
 
 
-//按键只是为了产生 电平变化，以此来 触发中断；
-#define     KEY1_INT_GPIO_PORT          GPIOA
+#define     KEY1_INT_GPIO_PORT         GPIOA
 #define     KEY1_INT_GPIO_CLK          (RCC_APB2Periph_GPIOA|RCC_APB2Periph_AFIO)
 #define     KEY1_INT_GPIO_PIN          GPIO_Pin_0
 
@@ -31,5 +30,6 @@
 
 
 void EXTI_Key_Config(void);
+
 #endif /*Exti_H*/
 
