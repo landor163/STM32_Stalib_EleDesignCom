@@ -1,13 +1,18 @@
 /*
-名称：GPIO输入
-
-要点：
-	使能 GPIO端口时钟；
-	初始化GPIO目标引脚为 浮空输入
-
-硬件连接：
-		PA0  和 GND 接按键；VCC 接 按键；
-        PC13 和 GND 接按键；VCC 接 按键；
+@Flie：GPIO输入
+@Hardware connection：
+					PA0  和 GND 接按键；VCC 接 按键；
+					PC13 和 GND 接按键；VCC 接 按键；
+@Program call：
+			while(1)
+			{
+				if( Key_Scan(KEY1_GPIO_PORT,KEY1_GPIO_PIN) == KEY_ON )
+				{
+					code here
+				}
+			}
+@Author：landor163
+@Date：2021年6月19日
 */
 
 #include "Key.h"

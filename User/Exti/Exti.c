@@ -1,37 +1,9 @@
 /*
-名称：EXTI外部中断
-
-小知识：
-      EXTI 初始化结构体
-      typedef struct
-      {
-        uint32_t EXTI_Line;               //中断线
-        
-        EXTIMode_TypeDef EXTI_Mode;       //中断模式
-
-        EXTITrigger_TypeDef EXTI_Trigger; //触发类型：上升沿触发/下降沿触发/都触发；
-
-        FunctionalState EXTI_LineCmd;     //EXTI 使能
-      }EXTI_InitTypeDef;
-
-      静态函数不需要再次声明；
-
-      目前要通用比较难，只能按键触发中断；
-      按键只是为了产生 电平变化，以此来 触发中断；
-
-要点：
-    初始化需要用来产生中断的 GPIO；
-    初始化Exti；
-    配置NVIC；
-        中断源；
-        抢占优先级；
-        子优先级；
-        中断使能 或 失能；
-    编写中断服务函数；
-
-硬件连接：
-        PA0  和 GND 接按键；VCC 接 按键；
-        PC13 和 GND 接按键；VCC 接 按键；
+@Name：EXTI外部中断
+@Hardware connection：
+                    PA0  和 GND 接按键；VCC 接 按键；
+                    PC13 和 GND 接按键；VCC 接 按键；
+@Program call：见文件 stm32f10x_it.c 中 KEY1_IRQHandler 和 KEY2_IRQHandler 函数；
 */
 
 

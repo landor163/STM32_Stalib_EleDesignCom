@@ -8,7 +8,7 @@
 #define     BUZZER_GPIO_CLK     RCC_APB2Periph_GPIOA
 #define     BUZZER_GPIO_PIN     GPIO_Pin_8
 #define     BUZZER_GPIO_PORT    GPIOA
-//目前要响 高电平 直接调用 ON；
+
 #define     ON      GPIO_SetBits(BUZZER_GPIO_PORT,BUZZER_GPIO_PIN);
 #define     OFF     GPIO_ResetBits(BUZZER_GPIO_PORT,BUZZER_GPIO_PIN);
 

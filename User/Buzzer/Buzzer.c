@@ -1,17 +1,21 @@
 /*
-名称：GPIO输出
+@Flie：GPIO输出
+@Hardware connection：
+                    PA8 接 蜂鸣器 正极；
+                    GND 接 蜂鸣器 负极；
+                    PA8拉高 蜂鸣器开始工作；
+@Program call：
+            while(1)
+            {
+                ON;     //响
+            }
 
-小知识：
-      标准库函数对每个外设都建立了一个初始化结构体，就像这个样子 GPIO_InitTypeDef ；
-      分别在各自的 标准****.h 里面；
-
-要点：
-    使能 GPIO 端口时钟；
-    初始化 GPIO 目标引脚为 推挽输出模式；
-
-硬件连接：
-        PA8 接 蜂鸣器 正极；
-        GND 接 蜂鸣器 负极；
+            while(1)
+            {
+                OFF;    //灭
+            }
+@Author：landor163
+@Date：2021年6月19日
 */
 
 
