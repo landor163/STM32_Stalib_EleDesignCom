@@ -8,7 +8,7 @@
 			{
 				if(Key_Scan(KEY1_GPIO_PORT,KEY1_GPIO_PIN)==KEY_ON)		//当检测到 KEY1 被按下
 				{
-					* code *
+					code here
 				}
 			}
 @Author：landor163

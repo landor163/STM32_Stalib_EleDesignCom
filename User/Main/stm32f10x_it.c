@@ -136,27 +136,6 @@ void SysTick_Handler(void)
 {
 }
 
-void KEY1_IRQHandler(void)
-{
-	if(EXTI_GetITStatus(KEY1_INT_EXTI_LINE) != RESET) //确保是否产生了 Exti 中断
-	{	
-    /* code */
-
-		EXTI_ClearITPendingBit(KEY1_INT_EXTI_LINE);//清除中断标志位  
-	}  
-}
-
-void KEY2_IRQHandler(void)
-{
-
-	if(EXTI_GetITStatus(KEY2_INT_EXTI_LINE) != RESET)  //确保是否产生了 Exti 中断
-	{
-    /* code */
-    
-		EXTI_ClearITPendingBit(KEY2_INT_EXTI_LINE);   //清除中断标志位    
-	}  
-}
-
 /******************************************************************************/
 /*                 STM32F10x Peripherals Interrupt Handlers                   */
 /*  Add here the Interrupt Handler for the used peripheral(s) (PPP), for the  */
@@ -179,3 +158,35 @@ void KEY2_IRQHandler(void)
 
 
 /******************* (C) COPYRIGHT 2011 STMicroelectronics *****END OF FILE****/
+
+void KEY1_IRQHandler(void)
+{
+    if(EXTI_GetITStatus(KEY1_INT_EXTI_LINE)!=RESET)
+    {	
+        /* code here */
+
+        EXTI_ClearITPendingBit(KEY1_INT_EXTI_LINE);
+    }  
+}
+
+void KEY2_IRQHandler(void)
+{
+    if(EXTI_GetITStatus(KEY2_INT_EXTI_LINE)!=RESET)
+    {
+        /* code here */
+    
+        EXTI_ClearITPendingBit(KEY2_INT_EXTI_LINE);
+	}  
+}
+
+extern int time = 0;    //ms 计时变量
+void  BASIC_TIM_IRQHandler(void)
+{
+    if(TIM_GetITStatus(BASIC_TIM,TIM_IT_Update)!=RESET) 
+    {	
+        time++;
+    
+        TIM_ClearITPendingBit(BASIC_TIM ,TIM_FLAG_Update);  		 
+    }		 	
+}
+

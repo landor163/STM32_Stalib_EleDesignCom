@@ -21,6 +21,8 @@
 #include "SPI.h"
 #include "ADC.h"
 #include "GeneralTimer_3.h"
+#include "BaseTimer_6.h"
+
 
 
 int main(void)
@@ -32,6 +34,7 @@ int main(void)
     USART_Config();
     ADCx_Init();
     GENERAL_TIM_Init();
+    BASIC_TIM_Init();
     while(1)
     {
         

@@ -370,7 +370,7 @@
               <MiscControls></MiscControls>
               <Define>STM32F10X_HD,USE_STDPERIPH_DRIVER</Define>
               <Undefine></Undefine>
-              <IncludePath>..\Libraries\CMSIS;..\Libraries\STM32F10x_StdPeriph_Driver\inc;..\User\Main;..\User\Buzzer;..\User\Exti;..\User\Key;..\User\SysTick;..\User\Usart;..\User\I2C;..\User\SPI;..\User\ADC;..\User\GeneralTimer_3</IncludePath>
+              <IncludePath>..\Libraries\CMSIS;..\Libraries\STM32F10x_StdPeriph_Driver\inc;..\User\Main;..\User\Buzzer;..\User\Exti;..\User\Key;..\User\SysTick;..\User\Usart;..\User\I2C;..\User\SPI;..\User\ADC;..\User\GeneralTimer_3;..\User\BaseTimer_6</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -612,6 +612,11 @@
               <FileName>GeneralTimer_3.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\User\GeneralTimer_3\GeneralTimer_3.c</FilePath>
+            </File>
+            <File>
+              <FileName>BaseTimer_6.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\User\BaseTimer_6\BaseTimer_6.c</FilePath>
             </File>
           </Files>
         </Group>

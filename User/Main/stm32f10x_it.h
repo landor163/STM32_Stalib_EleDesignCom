@@ -31,7 +31,7 @@
 #include "stm32f10x.h"
 
 #include "Exti.h"
-#include "Buzzer.h"
+#include "BaseTimer_6.h"
 
 /* Exported types ------------------------------------------------------------*/
 /* Exported constants --------------------------------------------------------*/
