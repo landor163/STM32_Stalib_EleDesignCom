@@ -1,12 +1,14 @@
 /*
 @Flie：串口通讯
-@Hardware connection：取决于使用的具体时串口几
+@Hardware connection：取决于使用的具体是串口几
 @Program call：
 				while(1)
 				{
 					printf("hello world! \n");
 					Delay_ms(100);
 				}
+@Author：landor163
+@Date：2021年6月19日
 */
 
 

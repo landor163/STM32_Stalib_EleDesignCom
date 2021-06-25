@@ -17,6 +17,9 @@
 #include "Key.h"
 #include "SysTick.h"
 #include "Usart.h"
+#include "I2C.h"
+#include "SPI.h"
+#include "ADC.h"
 
 
 int main(void)
@@ -26,6 +29,7 @@ int main(void)
     Key_GPIO_Config();
     SysTick_Init();
     USART_Config();
+    ADCx_Init();
     while(1)
     {
         

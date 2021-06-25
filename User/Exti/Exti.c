@@ -7,6 +7,8 @@
 @Program call：
                 见文件 stm32f10x_it.c 中 KEY1_IRQHandler 和 KEY2_IRQHandler 函数；
                 注意相关在文件在 stm32f10x_it.h 中声明；
+@Author：landor163
+@Date：2021年6月19日
 */
 
 
