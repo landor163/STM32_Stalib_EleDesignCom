@@ -28,7 +28,7 @@ int main(void)
     USART_Config();
     while(1)
     {
-
+        
     }
 }
 

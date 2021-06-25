@@ -21,7 +21,7 @@
                 "d:\\001_Main\\006_STM32_Stalib_EleDesignCom\\Doc"
             ],
             "defines": [
-                "STM32F10X_HD",
+                "STM32F10X_MD",
                 "USE_STDPERIPH_DRIVER",
                 "__CC_ARM",
                 "__arm__",
