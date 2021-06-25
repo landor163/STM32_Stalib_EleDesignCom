@@ -29,6 +29,10 @@
 #define            GENERAL_TIM_CH4_PIN           GPIO_Pin_1
 
 
+void GENERAL_ccr1_Mode_Config(int a);
+void GENERAL_ccr2_Mode_Config(int a);
+void GENERAL_ccr3_Mode_Config(int a);
+void GENERAL_ccr4_Mode_Config(int a);
 void GENERAL_TIM_Init(void);
 
 #endif /*GeneralTimer_3_H*/
