@@ -113,5 +113,6 @@ void Usart_SendHalfWord( USART_TypeDef * pUSARTx, uint16_t ch);
 
 int fputc(int ch, FILE *f);
 int fgetc(FILE *f);
+
 #endif /*Usart_H*/
 

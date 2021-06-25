@@ -5,7 +5,7 @@
     3、程序和注释内 回车一格；
     4、文初有简单注释，程序内尽可能减少注释；
     5、一行的注释直接写引号后面，多行的写引号的下一行，要有缩进；
-    6、一切以美观为主；
+    6、一切以美观为主，不必强求程序中间用几个空格；
 @Author：landor163
 @Date：2021年6月19日
 */
@@ -23,6 +23,7 @@ int main(void)
 {
     BUZZER_GPIO_Config();
     EXTI_Key_Config();
+    Key_GPIO_Config();
     SysTick_Init();
     USART_Config();
     while(1)

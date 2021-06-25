@@ -1,9 +1,12 @@
 /*
-@Name：EXTI外部中断
+@Flie：EXTI外部中断
 @Hardware connection：
                     PA0  和 GND 接按键；VCC 接 按键；
                     PC13 和 GND 接按键；VCC 接 按键；
-@Program call：见文件 stm32f10x_it.c 中 KEY1_IRQHandler 和 KEY2_IRQHandler 函数；
+                    按键触发外部中断条件，以上为按键硬件连接；
+@Program call：
+                见文件 stm32f10x_it.c 中 KEY1_IRQHandler 和 KEY2_IRQHandler 函数；
+                注意相关在文件在 stm32f10x_it.h 中声明；
 */
 
 
@@ -14,15 +17,15 @@ static void NVIC_Configuration(void)
 {
   NVIC_InitTypeDef NVIC_InitStructure;                      //定义一个 NVIC_InitTypeDef 类型的 结构体;
   
-  NVIC_PriorityGroupConfig( NVIC_PriorityGroup_1 );         //配置 NVIC 为 优先级组1
+  NVIC_PriorityGroupConfig(NVIC_PriorityGroup_1);           //配置 NVIC 为 优先级组1
   
   NVIC_InitStructure.NVIC_IRQChannel= KEY1_INT_EXTI_IRQ ;   //配置 中断源：按键1
 
-  NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority= 1 ; //配置 抢先优先级
+  NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority=1;   //配置 抢先优先级
 
-  NVIC_InitStructure.NVIC_IRQChannelSubPriority= 1 ;        //配置 子优先级
+  NVIC_InitStructure.NVIC_IRQChannelSubPriority=1;          //配置 子优先级
 
-  NVIC_InitStructure.NVIC_IRQChannelCmd= ENABLE ;           //使能中断通道
+  NVIC_InitStructure.NVIC_IRQChannelCmd=ENABLE;             //使能中断通道
   NVIC_Init(&NVIC_InitStructure);
   
   NVIC_InitStructure.NVIC_IRQChannel= KEY2_INT_EXTI_IRQ ;   //配置 中断源：按键2
