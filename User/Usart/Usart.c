@@ -1,8 +1,9 @@
 /*
-名称：串口通讯
-
-要点：
-	在 配套头文件 里面直接 选择相应的 宏
+@Flie：串口通讯
+@Hardware connection：
+					USART1 
+					TX-A9
+					RX-A10
 */
 
 
