@@ -14,6 +14,7 @@
                 "d:\\001_Main\\006_STM32_Stalib_EleDesignCom\\User\\I2C",
                 "d:\\001_Main\\006_STM32_Stalib_EleDesignCom\\User\\SPI",
                 "d:\\001_Main\\006_STM32_Stalib_EleDesignCom\\User\\ADC",
+                "d:\\001_Main\\006_STM32_Stalib_EleDesignCom\\User\\GeneralTimer_3",
                 "D:\\017_Keil_MDK-ARM_V5.26\\ARM\\ARMCC\\include",
                 "D:\\017_Keil_MDK-ARM_V5.26\\ARM\\ARMCC\\include\\rw",
                 "d:\\001_Main\\006_STM32_Stalib_EleDesignCom\\Libraries\\CMSIS\\startup",

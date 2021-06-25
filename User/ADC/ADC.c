@@ -1,5 +1,5 @@
 /*
-@Flie：ADC电压采集
+@Flie：ADC电压采集 - 多通道 DMA 读取
 @Hardware connection：
                     取决于使用的具体的ADC通道；
                     用作ADC采集的 IO 必须没有复用，否则采集电压会有影响；
@@ -18,7 +18,7 @@
 				ADC_ConvertedValueLocal[5] =(float) ADC_ConvertedValue[5]/4096*3.3;
 			}
 @Author：landor163
-@Date：2021年6月19日
+@Date：2021年6月25日
 */
 
 

@@ -20,6 +20,7 @@
 #include "I2C.h"
 #include "SPI.h"
 #include "ADC.h"
+#include "GeneralTimer_3.h"
 
 
 int main(void)
@@ -30,6 +31,7 @@ int main(void)
     SysTick_Init();
     USART_Config();
     ADCx_Init();
+    GENERAL_TIM_Init();
     while(1)
     {
         

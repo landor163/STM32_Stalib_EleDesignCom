@@ -37,3 +37,4 @@
 ..\output\main.o: ..\User\I2C\I2C.h
 ..\output\main.o: ..\User\SPI\SPI.h
 ..\output\main.o: ..\User\ADC\ADC.h
+..\output\main.o: ..\User\GeneralTimer_3\GeneralTimer_3.h
