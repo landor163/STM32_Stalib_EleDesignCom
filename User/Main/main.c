@@ -17,7 +17,8 @@
 #include "Key.h"
 #include "SysTick.h"
 #include "Usart.h"
-#include "I2C.h"
+#include "Hardware_I2C.h"
+#include "Simulation_I2C.h"
 #include "SPI.h"
 #include "ADC.h"
 #include "GeneralTimer_3.h"
@@ -37,9 +38,10 @@ int main(void)
     BASIC_TIM_Init();
     Encoder_Init_TIM2();
     Encoder_Init_TIM4();
+    I2C_EE_Init();
     while(1)
     {
-        
+
     }
 }
 

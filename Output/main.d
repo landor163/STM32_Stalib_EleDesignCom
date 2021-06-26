@@ -34,7 +34,8 @@
 ..\output\main.o: ..\User\SysTick\SysTick.h
 ..\output\main.o: ..\User\Usart\Usart.h
 ..\output\main.o: D:\017_Keil_MDK-ARM_V5.26\ARM\ARMCC\Bin\..\include\stdio.h
-..\output\main.o: ..\User\I2C\I2C.h
+..\output\main.o: ..\User\Hardware_I2C\Hardware_I2C.h
+..\output\main.o: ..\User\Simulation_I2C\Simulation_I2C.h
 ..\output\main.o: ..\User\SPI\SPI.h
 ..\output\main.o: ..\User\ADC\ADC.h
 ..\output\main.o: ..\User\GeneralTimer_3\GeneralTimer_3.h

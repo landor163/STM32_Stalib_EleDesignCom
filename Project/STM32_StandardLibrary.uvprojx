@@ -370,7 +370,7 @@
               <MiscControls></MiscControls>
               <Define>STM32F10X_HD,USE_STDPERIPH_DRIVER</Define>
               <Undefine></Undefine>
-              <IncludePath>..\Libraries\CMSIS;..\Libraries\STM32F10x_StdPeriph_Driver\inc;..\User\Main;..\User\Buzzer;..\User\Exti;..\User\Key;..\User\SysTick;..\User\Usart;..\User\I2C;..\User\SPI;..\User\ADC;..\User\GeneralTimer_3;..\User\BaseTimer_6;..\User\Encoder</IncludePath>
+              <IncludePath>..\Libraries\CMSIS;..\Libraries\STM32F10x_StdPeriph_Driver\inc;..\User\Main;..\User\Buzzer;..\User\Exti;..\User\Key;..\User\SysTick;..\User\Usart;..\User\SPI;..\User\ADC;..\User\GeneralTimer_3;..\User\BaseTimer_6;..\User\Encoder;..\User\Hardware_I2C;..\User\Simulation_I2C</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -594,11 +594,6 @@
               <FilePath>..\User\Usart\Usart.c</FilePath>
             </File>
             <File>
-              <FileName>I2C.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\User\I2C\I2C.c</FilePath>
-            </File>
-            <File>
               <FileName>SPI.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\User\SPI\SPI.c</FilePath>
@@ -622,6 +617,16 @@
               <FileName>Encoder.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\User\Encoder\Encoder.c</FilePath>
+            </File>
+            <File>
+              <FileName>Hardware_I2C.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\User\Hardware_I2C\Hardware_I2C.c</FilePath>
+            </File>
+            <File>
+              <FileName>Simulation_I2C.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\User\Simulation_I2C\Simulation_I2C.c</FilePath>
             </File>
           </Files>
         </Group>
