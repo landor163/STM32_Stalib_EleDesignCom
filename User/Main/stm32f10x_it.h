@@ -32,6 +32,7 @@
 
 #include "Exti.h"
 #include "BaseTimer_6.h"
+#include "Encoder.h"
 
 /* Exported types ------------------------------------------------------------*/
 /* Exported constants --------------------------------------------------------*/

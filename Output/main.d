@@ -39,3 +39,4 @@
 ..\output\main.o: ..\User\ADC\ADC.h
 ..\output\main.o: ..\User\GeneralTimer_3\GeneralTimer_3.h
 ..\output\main.o: ..\User\BaseTimer_6\BaseTimer_6.h
+..\output\main.o: ..\User\Encoder\Encoder.h

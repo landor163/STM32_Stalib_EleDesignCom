@@ -22,7 +22,7 @@
 #include "ADC.h"
 #include "GeneralTimer_3.h"
 #include "BaseTimer_6.h"
-
+#include "Encoder.h"
 
 
 int main(void)
@@ -35,6 +35,8 @@ int main(void)
     ADCx_Init();
     GENERAL_TIM_Init();
     BASIC_TIM_Init();
+    Encoder_Init_TIM2();
+    Encoder_Init_TIM4();
     while(1)
     {
         

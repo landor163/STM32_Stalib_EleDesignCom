@@ -31,3 +31,4 @@
 ..\output\stm32f10x_it.o: ..\Libraries\STM32F10x_StdPeriph_Driver\inc\misc.h
 ..\output\stm32f10x_it.o: ..\User\Exti\Exti.h
 ..\output\stm32f10x_it.o: ..\User\BaseTimer_6\BaseTimer_6.h
+..\output\stm32f10x_it.o: ..\User\Encoder\Encoder.h
