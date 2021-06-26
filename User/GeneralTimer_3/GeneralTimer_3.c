@@ -1,5 +1,5 @@
 /*
-@Flie：通用定时器 - PWM输出
+@Flie：通用定时器 - PWM输出 - 直流电机
 @Hardware connection：取决于具体使用的 输出比较通道；
 @Program call：
 			while(1)
