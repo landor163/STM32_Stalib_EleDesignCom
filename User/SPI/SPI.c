@@ -1,7 +1,65 @@
 /*
 @Flie：SPI 读 FLASH
 @Hardware connection：
+                    CS   接 C0；
+                    CLK  接 A5；
+                    MISO 接 A6；
+                    MOSI 接 A7；
 @Program call：
+            typedef enum{FAILED=0,PASSED=!FAILED}TestStatus;
+
+            #define     TxBufferSize1       (countof(TxBuffer1)-1)
+            #define     RxBufferSize1       (countof(TxBuffer1)-1)
+            #define     countof(a)          (sizeof(a)/sizeof(*(a)))
+            #define     BufferSize          (countof(Tx_Buffer)-1)
+
+            #define     FLASH_WriteAddress      0x00000
+            #define     FLASH_ReadAddress       FLASH_WriteAddress
+            #define     FLASH_SectorToErase     FLASH_WriteAddress
+
+            uint8_t Tx_Buffer[]="感谢您选用野火stm32开发板\r\n";
+            uint8_t Rx_Buffer[BufferSize];
+
+            __IO uint32_t DeviceID=0;
+            __IO uint32_t FlashID=0;
+            __IO TestStatus TransferStatus1=FAILED;
+
+
+            TestStatus Buffercmp(uint8_t* pBuffer1,uint8_t* pBuffer2,uint16_t BufferLength)
+            {
+                while(BufferLength--)
+                {
+                    if(*pBuffer1 != *pBuffer2)
+                    {
+                        return FAILED;
+                    }
+
+                    pBuffer1++;
+                    pBuffer2++;
+                }
+                return PASSED;
+            }
+
+            void main()
+            {
+                DeviceID = SPI_FLASH_ReadDeviceID();
+                Delay_ms(200);
+                FlashID = SPI_FLASH_ReadID();
+                while(1)
+                {
+                    if (FlashID==sFLASH_ID)
+                    {
+                        SPI_FLASH_SectorErase(FLASH_SectorToErase);
+                        SPI_FLASH_BufferWrite(Tx_Buffer,FLASH_WriteAddress,BufferSize);
+                        SPI_FLASH_BufferRead(Rx_Buffer,FLASH_ReadAddress,BufferSize);
+                        TransferStatus1=Buffercmp(Tx_Buffer,Rx_Buffer,BufferSize);
+                        if(PASSED==TransferStatus1)
+                        { 
+                            ON;
+                        }
+                    }
+                }
+            }
 @Author：landor163
 @Date：2021年6月19日
 */
@@ -420,3 +478,14 @@ static uint16_t SPI_TIMEOUT_UserCallback(uint8_t errorCode)
   return 0;
 }
 
+/*
+@函数功能：比较两个缓冲区中的数据是否相等；
+@输入：
+    pBuffer1：src缓冲区指针；
+    pBuffer2：dst缓冲区指针；
+    BufferLength：缓冲区长度；
+@输出：无；
+@返回：
+    FAILED：pBuffer1 不等于 pBuffer2；
+    PASSED：pBuffer1 等于 pBuffer2；
+*/
