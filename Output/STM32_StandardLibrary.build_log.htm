@@ -27,51 +27,13 @@ Project File Date:  06/26/2021
 <h2>Output:</h2>
 *** Using Compiler 'V5.06 update 6 (build 750)', folder: 'D:\017_Keil_MDK-ARM_V5.26\ARM\ARMCC\Bin'
 Build target 'STM32_StandardLibrary'
-compiling main.c...
-compiling SPI.c...
-..\User\SPI\SPI.c(67): warning:  #223-D: function "SPI_FLASH_WriteEnable" declared implicitly
-      SPI_FLASH_WriteEnable();                            //发送FLASH写使能命令；
-..\User\SPI\SPI.c(68): warning:  #223-D: function "SPI_FLASH_WaitForWriteEnd" declared implicitly
-      SPI_FLASH_WaitForWriteEnd();
-..\User\SPI\SPI.c(73): warning:  #223-D: function "SPI_FLASH_SendByte" declared implicitly
-      SPI_FLASH_SendByte(W25X_SectorErase);               //发送扇区擦除指令；
-..\User\SPI\SPI.c(85): warning:  #223-D: function "SPI_FLASH_WriteEnable" declared implicitly
-      SPI_FLASH_WriteEnable();                //发送FLASH写使能命令；
-..\User\SPI\SPI.c(90): warning:  #223-D: function "SPI_FLASH_SendByte" declared implicitly
-      SPI_FLASH_SendByte(W25X_ChipErase);     //发送整块擦除指令；
-..\User\SPI\SPI.c(93): warning:  #223-D: function "SPI_FLASH_WaitForWriteEnd" declared implicitly
-      SPI_FLASH_WaitForWriteEnd();            //等待擦除完毕�?
-..\User\SPI\SPI.c(106): warning:  #223-D: function "SPI_FLASH_WriteEnable" declared implicitly
-      SPI_FLASH_WriteEnable();                            //发�? FLASH 写使�? 命令�?
-..\User\SPI\SPI.c(109): warning:  #223-D: function "SPI_FLASH_SendByte" declared implicitly
-      SPI_FLASH_SendByte(W25X_PageProgram);               //写页写指令；
-..\User\SPI\SPI.c(129): warning:  #223-D: function "SPI_FLASH_WaitForWriteEnd" declared implicitly
-      SPI_FLASH_WaitForWriteEnd();                        //等待写入完毕�?
-..\User\SPI\SPI.c(228): warning:  #223-D: function "SPI_FLASH_SendByte" declared implicitly
-    SPI_FLASH_SendByte(W25X_ReadData);
-..\User\SPI\SPI.c(263): warning:  #223-D: function "SPI_FLASH_SendByte" declared implicitly
-    SPI_FLASH_SendByte(W25X_JedecDeviceID);
-..\User\SPI\SPI.c(295): warning:  #223-D: function "SPI_FLASH_SendByte" declared implicitly
-    SPI_FLASH_SendByte(W25X_DeviceID);
-..\User\SPI\SPI.c(326): warning:  #223-D: function "SPI_FLASH_SendByte" declared implicitly
-    SPI_FLASH_SendByte(W25X_ReadData);
-..\User\SPI\SPI.c(345): warning:  #223-D: function "SPI_FLASH_SendByte" declared implicitly
-    return (SPI_FLASH_SendByte(Dummy_Byte));
-..\User\SPI\SPI.c(353): error:  #159: declaration is incompatible with previous "SPI_FLASH_SendByte"  (declared at line 73)
-  u8 SPI_FLASH_SendByte(u8 byte)
-..\User\SPI\SPI.c(408): error:  #159: declaration is incompatible with previous "SPI_FLASH_WriteEnable"  (declared at line 67)
-  void SPI_FLASH_WriteEnable(void)
-..\User\SPI\SPI.c(428): error:  #159: declaration is incompatible with previous "SPI_FLASH_WaitForWriteEnd"  (declared at line 68)
-  void SPI_FLASH_WaitForWriteEnd(void)
-..\User\SPI\SPI.c: 14 warnings, 3 errors
-"..\Output\STM32_StandardLibrary.axf" - 3 Error(s), 14 Warning(s).
+"..\Output\STM32_StandardLibrary.axf" - 0 Error(s), 0 Warning(s).
 
 <h2>Collection of Component include folders:</h2>
   d:\001_Main\006_STM32_Stalib_EleDesignCom\Project\RTE
   D:\017_Keil_MDK-ARM_V5.26\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include
 
 <h2>Collection of Component Files used:</h2>
-Target not created.
 </pre>
 </body>
 </html>

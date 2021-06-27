@@ -239,244 +239,184 @@ void SPI_FLASH_BufferRead(u8* pBuffer,u32 ReadAddr,u16 NumByteToRead)
     SPI_FLASH_CS_HIGH();                                //停止信号 FLASH: CS 高电平；
 }
 
- /**
-  * @brief  读取FLASH ID
-  * @param 	无
-  * @retval FLASH ID
-  */
+/*
+@函数功能：读取FLASH ID；
+@输入：无；
+@输出：Temp：FLASH ID；
+*/
 u32 SPI_FLASH_ReadID(void)
 {
-  u32 Temp = 0, Temp0 = 0, Temp1 = 0, Temp2 = 0;
+    u32 Temp=0,Temp0=0,Temp1=0,Temp2=0;
 
-  /* 开始通讯：CS低电平 */
-  SPI_FLASH_CS_LOW();
+    SPI_FLASH_CS_LOW();                         //开始通讯：CS低电平；
 
-  /* 发送JEDEC指令，读取ID */
-  SPI_FLASH_SendByte(W25X_JedecDeviceID);
+    SPI_FLASH_SendByte(W25X_JedecDeviceID);     //发送 JEDEC 指令，读取ID；
 
-  /* 读取一个字节数据 */
-  Temp0 = SPI_FLASH_SendByte(Dummy_Byte);
+    Temp0=SPI_FLASH_SendByte(Dummy_Byte);       //读取 一个字节 数据；
+    Temp1=SPI_FLASH_SendByte(Dummy_Byte);
+    Temp2=SPI_FLASH_SendByte(Dummy_Byte);
 
-  /* 读取一个字节数据 */
-  Temp1 = SPI_FLASH_SendByte(Dummy_Byte);
+    SPI_FLASH_CS_HIGH();                        //停止通讯：CS高电平；
 
-  /* 读取一个字节数据 */
-  Temp2 = SPI_FLASH_SendByte(Dummy_Byte);
+    Temp=(Temp0<<16)|(Temp1<<8)|Temp2;          //把数据组合起来，作为函数的返回值；
 
- /* 停止通讯：CS高电平 */
-  SPI_FLASH_CS_HIGH();
-
-  /*把数据组合起来，作为函数的返回值*/
-	Temp = (Temp0 << 16) | (Temp1 << 8) | Temp2;
-
-  return Temp;
+    return Temp;
 }
- /**
-  * @brief  读取FLASH Device ID
-  * @param 	无
-  * @retval FLASH Device ID
-  */
+
+/*
+@函数功能：读取FLASH Device ID；
+@输入：无；
+@输出：Temp：FLASH Device ID；
+*/
 u32 SPI_FLASH_ReadDeviceID(void)
 {
-  u32 Temp = 0;
+    u32 Temp=0;
 
-  /* Select the FLASH: Chip Select low */
-  SPI_FLASH_CS_LOW();
+    SPI_FLASH_CS_LOW();                         //选择FLASH：片选低电平；
 
-  /* Send "RDID " instruction */
-  SPI_FLASH_SendByte(W25X_DeviceID);
-  SPI_FLASH_SendByte(Dummy_Byte);
-  SPI_FLASH_SendByte(Dummy_Byte);
-  SPI_FLASH_SendByte(Dummy_Byte);
-  
-  /* Read a byte from the FLASH */
-  Temp = SPI_FLASH_SendByte(Dummy_Byte);
+    SPI_FLASH_SendByte(W25X_DeviceID);          //发送 RDID 指令；
+    SPI_FLASH_SendByte(Dummy_Byte);
+    SPI_FLASH_SendByte(Dummy_Byte);
+    SPI_FLASH_SendByte(Dummy_Byte);
 
-  /* Deselect the FLASH: Chip Select high */
-  SPI_FLASH_CS_HIGH();
+    Temp=SPI_FLASH_SendByte(Dummy_Byte);        //从 FLASH 中读取一个字节；
 
-  return Temp;
+    SPI_FLASH_CS_HIGH();                        //取消选择 FLASH：片选高电平；
+
+    return Temp;
 }
-/*******************************************************************************
-* Function Name  : SPI_FLASH_StartReadSequence
-* Description    : Initiates a read data byte (READ) sequence from the Flash.
-*                  This is done by driving the /CS line low to select the device,
-*                  then the READ instruction is transmitted followed by 3 bytes
-*                  address. This function exit and keep the /CS line low, so the
-*                  Flash still being selected. With this technique the whole
-*                  content of the Flash is read with a single READ instruction.
-* Input          : - ReadAddr : FLASH's internal address to read from.
-* Output         : None
-* Return         : None
-*******************************************************************************/
+
+/*
+@函数功能：开始读取序列；
+@输入：ReadAddr:要读取的 FLASH 的内部地址；
+@输出：无；
+*/
 void SPI_FLASH_StartReadSequence(u32 ReadAddr)
 {
-  /* Select the FLASH: Chip Select low */
-  SPI_FLASH_CS_LOW();
+    SPI_FLASH_CS_LOW();                                 //选择FLASH：片选低电平；
 
-  /* Send "Read from Memory " instruction */
-  SPI_FLASH_SendByte(W25X_ReadData);
+    SPI_FLASH_SendByte(W25X_ReadData);                  //发送“从内存中读取”指令；
 
-  /* Send the 24-bit address of the address to read from -----------------------*/
-  /* Send ReadAddr high nibble address byte */
-  SPI_FLASH_SendByte((ReadAddr & 0xFF0000) >> 16);
-  /* Send ReadAddr medium nibble address byte */
-  SPI_FLASH_SendByte((ReadAddr& 0xFF00) >> 8);
-  /* Send ReadAddr low nibble address byte */
-  SPI_FLASH_SendByte(ReadAddr & 0xFF);
+    //发送要读取的地址的24位地址；
+    SPI_FLASH_SendByte((ReadAddr&0xFF0000)>>16);        //发送 ReadAddr 高半地址字节；
+    SPI_FLASH_SendByte((ReadAddr&0xFF00)>>8);           //发送 ReadAddr 中半字节地址字节；
+    SPI_FLASH_SendByte(ReadAddr&0xFF);                  //发送 ReadAddr 低四位地址字节；
 }
 
-
- /**
-  * @brief  使用SPI读取一个字节的数据
-  * @param  无
-  * @retval 返回接收到的数据
-  */
+/*
+@函数功能：使用SPI读取一个字节的数据；
+@输入：无；
+@输出：返回接收到的数据；
+*/
 u8 SPI_FLASH_ReadByte(void)
 {
-  return (SPI_FLASH_SendByte(Dummy_Byte));
+    return (SPI_FLASH_SendByte(Dummy_Byte));
 }
 
- /**
-  * @brief  使用SPI发送一个字节的数据
-  * @param  byte：要发送的数据
-  * @retval 返回接收到的数据
-  */
+/*
+@函数功能：使用SPI发送一个字节的数据；
+@输入：byte:要发送的数据；
+@输出：返回接收到的数据；
+*/
 u8 SPI_FLASH_SendByte(u8 byte)
 {
-	 SPITimeout = SPIT_FLAG_TIMEOUT;
-  /* 等待发送缓冲区为空，TXE事件 */
-  while (SPI_I2S_GetFlagStatus(FLASH_SPIx , SPI_I2S_FLAG_TXE) == RESET)
-	{
-    if((SPITimeout--) == 0) return SPI_TIMEOUT_UserCallback(0);
-   }
+    SPITimeout=SPIT_FLAG_TIMEOUT;
+    
+    while(SPI_I2S_GetFlagStatus(FLASH_SPIx,SPI_I2S_FLAG_TXE)==RESET)        //等待发送缓冲区为空，TXE事件；
+    {
+        if((SPITimeout--)==0) return SPI_TIMEOUT_UserCallback(0);
+    }
+    
+    SPI_I2S_SendData(FLASH_SPIx,byte);                                      //写入数据寄存器，把要写入的数据写入发送缓冲区；
 
-  /* 写入数据寄存器，把要写入的数据写入发送缓冲区 */
-  SPI_I2S_SendData(FLASH_SPIx , byte);
-
-	SPITimeout = SPIT_FLAG_TIMEOUT;
-  /* 等待接收缓冲区非空，RXNE事件 */
-  while (SPI_I2S_GetFlagStatus(FLASH_SPIx , SPI_I2S_FLAG_RXNE) == RESET)
-  {
-    if((SPITimeout--) == 0) return SPI_TIMEOUT_UserCallback(1);
-   }
-
-  /* 读取数据寄存器，获取接收缓冲区数据 */
-  return SPI_I2S_ReceiveData(FLASH_SPIx );
+    SPITimeout=SPIT_FLAG_TIMEOUT;
+    
+    while(SPI_I2S_GetFlagStatus(FLASH_SPIx,SPI_I2S_FLAG_RXNE)==RESET)       //等待接收缓冲区非空，RXNE事件；
+    {
+        if((SPITimeout--)==0) return SPI_TIMEOUT_UserCallback(1);
+    }
+    
+    return SPI_I2S_ReceiveData(FLASH_SPIx);                                 //读取数据寄存器，获取接收缓冲区数据；
 }
 
- /**
-  * @brief  使用SPI发送两个字节的数据
-  * @param  byte：要发送的数据
-  * @retval 返回接收到的数据
-  */
+/*
+@函数功能：使用SPI发送两个字节的数据；
+@输入：byte:要发送的数据；
+@输出：返回接收到的数据；
+*/
 u16 SPI_FLASH_SendHalfWord(u16 HalfWord)
 {
-	  SPITimeout = SPIT_FLAG_TIMEOUT;
-  /* 等待发送缓冲区为空，TXE事件 */
-  while (SPI_I2S_GetFlagStatus(FLASH_SPIx , SPI_I2S_FLAG_TXE) == RESET)
-	{
-    if((SPITimeout--) == 0) return SPI_TIMEOUT_UserCallback(2);
-   }
-	
-  /* 写入数据寄存器，把要写入的数据写入发送缓冲区 */
-  SPI_I2S_SendData(FLASH_SPIx , HalfWord);
+    SPITimeout=SPIT_FLAG_TIMEOUT;
+    while(SPI_I2S_GetFlagStatus(FLASH_SPIx,SPI_I2S_FLAG_TXE)==RESET)
+    {
+        if((SPITimeout--)==0) return SPI_TIMEOUT_UserCallback(2);
+    }
+    SPI_I2S_SendData(FLASH_SPIx,HalfWord);
 
-	 SPITimeout = SPIT_FLAG_TIMEOUT;
-  /* 等待接收缓冲区非空，RXNE事件 */
-  while (SPI_I2S_GetFlagStatus(FLASH_SPIx , SPI_I2S_FLAG_RXNE) == RESET)
-	 {
-    if((SPITimeout--) == 0) return SPI_TIMEOUT_UserCallback(3);
-   }
-  /* 读取数据寄存器，获取接收缓冲区数据 */
-  return SPI_I2S_ReceiveData(FLASH_SPIx );
+    SPITimeout=SPIT_FLAG_TIMEOUT;
+    while(SPI_I2S_GetFlagStatus(FLASH_SPIx,SPI_I2S_FLAG_RXNE)==RESET)
+    {
+        if((SPITimeout--)==0) return SPI_TIMEOUT_UserCallback(3);
+    }
+    return SPI_I2S_ReceiveData(FLASH_SPIx);
 }
 
- /**
-  * @brief  向FLASH发送 写使能 命令
-  * @param  none
-  * @retval none
-  */
+//向FLASH发送 写使能 命令；
 void SPI_FLASH_WriteEnable(void)
 {
-  /* 通讯开始：CS低 */
-  SPI_FLASH_CS_LOW();
+    SPI_FLASH_CS_LOW();
 
-  /* 发送写使能命令*/
-  SPI_FLASH_SendByte(W25X_WriteEnable);
+    SPI_FLASH_SendByte(W25X_WriteEnable);       //发送 读状态寄存器 命令；
 
-  /*通讯结束：CS高 */
-  SPI_FLASH_CS_HIGH();
+    SPI_FLASH_CS_HIGH();
 }
 
-/* WIP(busy)标志，FLASH内部正在写入 */
-#define WIP_Flag                  0x01
 
- /**
-  * @brief  等待WIP(BUSY)标志被置0，即等待到FLASH内部数据写入完毕
-  * @param  none
-  * @retval none
-  */
+//WIP(busy)标志，FLASH内部正在写入；
+#define     WIP_Flag        0x01
+
+
+//等待 WIP(BUSY) 标志被 置0，即等待到 FLASH 内部数据 写入 完毕；
 void SPI_FLASH_WaitForWriteEnd(void)
 {
-  u8 FLASH_Status = 0;
+    u8 FLASH_Status=0;
+    
+    SPI_FLASH_CS_LOW();
+    
+    SPI_FLASH_SendByte(W25X_ReadStatusReg);
 
-  /* 选择 FLASH: CS 低 */
-  SPI_FLASH_CS_LOW();
-
-  /* 发送 读状态寄存器 命令 */
-  SPI_FLASH_SendByte(W25X_ReadStatusReg);
-
-  /* 若FLASH忙碌，则等待 */
-  do
-  {
-		/* 读取FLASH芯片的状态寄存器 */
-    FLASH_Status = SPI_FLASH_SendByte(Dummy_Byte);	 
-  }
-  while ((FLASH_Status & WIP_Flag) == SET);  /* 正在写入标志 */
-
-  /* 停止信号  FLASH: CS 高 */
-  SPI_FLASH_CS_HIGH();
+    do                                                      //若FLASH忙碌，则等待；
+    {
+        FLASH_Status=SPI_FLASH_SendByte(Dummy_Byte);        //读取FLASH芯片的状态寄存器；
+    }
+    while((FLASH_Status&WIP_Flag)==SET);                    //正在写入标志；
+    
+    SPI_FLASH_CS_HIGH();
 }
 
-
-//进入掉电模式
+//进入掉电模式；
 void SPI_Flash_PowerDown(void)   
-{ 
-  /* 通讯开始：CS低 */
-  SPI_FLASH_CS_LOW();
-
-  /* 发送 掉电 命令 */
-  SPI_FLASH_SendByte(W25X_PowerDown);
-
-  /*通讯结束：CS高 */
-  SPI_FLASH_CS_HIGH();
-}   
-
-//唤醒
-void SPI_Flash_WAKEUP(void)   
 {
-  /*选择 FLASH: CS 低 */
-  SPI_FLASH_CS_LOW();
+    SPI_FLASH_CS_LOW();
+  
+    SPI_FLASH_SendByte(W25X_PowerDown);     //发送 掉电 命令；
+  
+    SPI_FLASH_CS_HIGH();
+}
 
-  /* 发送 上电 命令 */
-  SPI_FLASH_SendByte(W25X_ReleasePowerDown);
-
-   /* 停止信号 FLASH: CS 高 */
-  SPI_FLASH_CS_HIGH();
-}   
-   
-
-/**
-  * @brief  等待超时回调函数
-  * @param  None.
-  * @retval None.
-  */
-static  uint16_t SPI_TIMEOUT_UserCallback(uint8_t errorCode)
+//唤醒；
+void SPI_Flash_WAKEUP(void)
 {
-  /* 等待超时后的处理,输出错误信息 */
-  FLASH_ERROR("SPI 等待超时!errorCode = %d",errorCode);
+    SPI_FLASH_CS_LOW();
+    SPI_FLASH_SendByte(W25X_ReleasePowerDown);
+    SPI_FLASH_CS_HIGH();
+}
+
+//等待超时回调函数；
+static uint16_t SPI_TIMEOUT_UserCallback(uint8_t errorCode)
+{
+  FLASH_ERROR("SPI 等待超时!errorCode = %d",errorCode);     //等待超时后的处理,输出错误信息；
+
   return 0;
 }
-   
-/*********************************************END OF FILE**********************/
+

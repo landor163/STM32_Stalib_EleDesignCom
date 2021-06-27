@@ -88,5 +88,19 @@ void SPI_FLASH_PageWrite(u8* pBuffer,u32 WriteAddr,u16 NumByteToWrite);
 void SPI_FLASH_BufferWrite(u8* pBuffer,u32 WriteAddr,u16 NumByteToWrite);
 void SPI_FLASH_BufferRead(u8* pBuffer,u32 ReadAddr,u16 NumByteToRead);
 
+u32 SPI_FLASH_ReadID(void);
+u32 SPI_FLASH_ReadDeviceID(void);
+
+void SPI_FLASH_StartReadSequence(u32 ReadAddr);
+
+u8 SPI_FLASH_ReadByte(void);
+u8 SPI_FLASH_SendByte(u8 byte);
+u16 SPI_FLASH_SendHalfWord(u16 HalfWord);
+
+void SPI_FLASH_WriteEnable(void);
+void SPI_FLASH_WaitForWriteEnd(void);
+void SPI_Flash_PowerDown(void);
+void SPI_Flash_WAKEUP(void);
+
 #endif /*SPI_H*/
 
