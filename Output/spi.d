@@ -29,3 +29,4 @@
 ..\output\spi.o: ..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_usart.h
 ..\output\spi.o: ..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_wwdg.h
 ..\output\spi.o: ..\Libraries\STM32F10x_StdPeriph_Driver\inc\misc.h
+..\output\spi.o: D:\017_Keil_MDK-ARM_V5.26\ARM\ARMCC\Bin\..\include\stdio.h

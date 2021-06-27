@@ -698,7 +698,7 @@ I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_spi.h)(0x60B0EE5F)
 I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_tim.h)(0x60B0EE5F)
 I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_usart.h)(0x60B0EE5F)
 I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\misc.h)(0x60B0EE5F)
-F (..\User\Main\main.c)(0x60D727ED)(--c99 -c --cpu Cortex-M3 -D__EVAL -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I..\Libraries\CMSIS -I..\Libraries\STM32F10x_StdPeriph_Driver\inc -I..\User\Main -I..\User\Buzzer -I..\User\Exti -I..\User\Key -I..\User\SysTick -I..\User\Usart -I..\User\SPI -I..\User\ADC -I..\User\GeneralTimer_3 -I..\User\BaseTimer_6 -I..\User\Encoder -I..\User\Hardware_I2C -I..\User\Simulation_I2C-I d:\001_Main\006_STM32_Stalib_EleDesignCom\Project\RTE-I D:\017_Keil_MDK-ARM_V5.26\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-I D:\017_Keil_MDK-ARM_V5.26\ARM\CMSIS\Include-D__UVISION_VERSION="514" -DSTM32F10X_HD -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o ..\output\main.o --omf_browse ..\output\main.crf --depend ..\output\main.d)
+F (..\User\Main\main.c)(0x60D7DFBC)(--c99 -c --cpu Cortex-M3 -D__EVAL -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I..\Libraries\CMSIS -I..\Libraries\STM32F10x_StdPeriph_Driver\inc -I..\User\Main -I..\User\Buzzer -I..\User\Exti -I..\User\Key -I..\User\SysTick -I..\User\Usart -I..\User\SPI -I..\User\ADC -I..\User\GeneralTimer_3 -I..\User\BaseTimer_6 -I..\User\Encoder -I..\User\Hardware_I2C -I..\User\Simulation_I2C-I d:\001_Main\006_STM32_Stalib_EleDesignCom\Project\RTE-I D:\017_Keil_MDK-ARM_V5.26\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-I D:\017_Keil_MDK-ARM_V5.26\ARM\CMSIS\Include-D__UVISION_VERSION="514" -DSTM32F10X_HD -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o ..\output\main.o --omf_browse ..\output\main.crf --depend ..\output\main.d)
 I (..\Libraries\CMSIS\stm32f10x.h)(0x60B0EE5F)
 I (..\Libraries\CMSIS\core_cm3.h)(0x60B0EE5F)
 I (D:\017_Keil_MDK-ARM_V5.26\ARM\ARMCC\include\stdint.h)(0x599EDB3E)
@@ -735,7 +735,7 @@ I (..\User\Usart\Usart.h)(0x60D57BF4)
 I (D:\017_Keil_MDK-ARM_V5.26\ARM\ARMCC\include\stdio.h)(0x599EDB3C)
 I (..\User\Hardware_I2C\Hardware_I2C.h)(0x60D72620)
 I (..\User\Simulation_I2C\Simulation_I2C.h)(0x60D70A7A)
-I (..\User\SPI\SPI.h)(0x60D57C28)
+I (..\User\SPI\SPI.h)(0x60D7EAD6)
 I (..\User\ADC\ADC.h)(0x60D59876)
 I (..\User\GeneralTimer_3\GeneralTimer_3.h)(0x60D68C54)
 I (..\User\BaseTimer_6\BaseTimer_6.h)(0x60D5DAF8)
@@ -924,8 +924,8 @@ I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_usart.h)(0x60B0EE5F)
 I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_wwdg.h)(0x60B0EE5F)
 I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\misc.h)(0x60B0EE5F)
 I (D:\017_Keil_MDK-ARM_V5.26\ARM\ARMCC\include\stdio.h)(0x599EDB3C)
-F (..\User\SPI\SPI.c)(0x60D57C1B)(--c99 -c --cpu Cortex-M3 -D__EVAL -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I..\Libraries\CMSIS -I..\Libraries\STM32F10x_StdPeriph_Driver\inc -I..\User\Main -I..\User\Buzzer -I..\User\Exti -I..\User\Key -I..\User\SysTick -I..\User\Usart -I..\User\SPI -I..\User\ADC -I..\User\GeneralTimer_3 -I..\User\BaseTimer_6 -I..\User\Encoder -I..\User\Hardware_I2C -I..\User\Simulation_I2C-I d:\001_Main\006_STM32_Stalib_EleDesignCom\Project\RTE-I D:\017_Keil_MDK-ARM_V5.26\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-I D:\017_Keil_MDK-ARM_V5.26\ARM\CMSIS\Include-D__UVISION_VERSION="514" -DSTM32F10X_HD -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o ..\output\spi.o --omf_browse ..\output\spi.crf --depend ..\output\spi.d)
-I (..\User\SPI\SPI.h)(0x60D57C28)
+F (..\User\SPI\SPI.c)(0x60D7EAB7)(--c99 -c --cpu Cortex-M3 -D__EVAL -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I..\Libraries\CMSIS -I..\Libraries\STM32F10x_StdPeriph_Driver\inc -I..\User\Main -I..\User\Buzzer -I..\User\Exti -I..\User\Key -I..\User\SysTick -I..\User\Usart -I..\User\SPI -I..\User\ADC -I..\User\GeneralTimer_3 -I..\User\BaseTimer_6 -I..\User\Encoder -I..\User\Hardware_I2C -I..\User\Simulation_I2C-I d:\001_Main\006_STM32_Stalib_EleDesignCom\Project\RTE-I D:\017_Keil_MDK-ARM_V5.26\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-I D:\017_Keil_MDK-ARM_V5.26\ARM\CMSIS\Include-D__UVISION_VERSION="514" -DSTM32F10X_HD -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o ..\output\spi.o --omf_browse ..\output\spi.crf --depend ..\output\spi.d)
+I (..\User\SPI\SPI.h)(0x60D7EAD6)
 I (..\Libraries\CMSIS\stm32f10x.h)(0x60B0EE5F)
 I (..\Libraries\CMSIS\core_cm3.h)(0x60B0EE5F)
 I (D:\017_Keil_MDK-ARM_V5.26\ARM\ARMCC\include\stdint.h)(0x599EDB3E)
@@ -954,6 +954,7 @@ I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_tim.h)(0x60B0EE5F)
 I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_usart.h)(0x60B0EE5F)
 I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_wwdg.h)(0x60B0EE5F)
 I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\misc.h)(0x60B0EE5F)
+I (D:\017_Keil_MDK-ARM_V5.26\ARM\ARMCC\include\stdio.h)(0x599EDB3C)
 F (..\User\ADC\ADC.c)(0x60D5BA79)(--c99 -c --cpu Cortex-M3 -D__EVAL -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I..\Libraries\CMSIS -I..\Libraries\STM32F10x_StdPeriph_Driver\inc -I..\User\Main -I..\User\Buzzer -I..\User\Exti -I..\User\Key -I..\User\SysTick -I..\User\Usart -I..\User\SPI -I..\User\ADC -I..\User\GeneralTimer_3 -I..\User\BaseTimer_6 -I..\User\Encoder -I..\User\Hardware_I2C -I..\User\Simulation_I2C-I d:\001_Main\006_STM32_Stalib_EleDesignCom\Project\RTE-I D:\017_Keil_MDK-ARM_V5.26\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-I D:\017_Keil_MDK-ARM_V5.26\ARM\CMSIS\Include-D__UVISION_VERSION="514" -DSTM32F10X_HD -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o ..\output\adc.o --omf_browse ..\output\adc.crf --depend ..\output\adc.d)
 I (..\User\ADC\ADC.h)(0x60D59876)
 I (..\Libraries\CMSIS\stm32f10x.h)(0x60B0EE5F)
@@ -1074,7 +1075,7 @@ I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_tim.h)(0x60B0EE5F)
 I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_usart.h)(0x60B0EE5F)
 I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_wwdg.h)(0x60B0EE5F)
 I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\misc.h)(0x60B0EE5F)
-F (..\User\Hardware_I2C\Hardware_I2C.c)(0x60D727E3)(--c99 -c --cpu Cortex-M3 -D__EVAL -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I..\Libraries\CMSIS -I..\Libraries\STM32F10x_StdPeriph_Driver\inc -I..\User\Main -I..\User\Buzzer -I..\User\Exti -I..\User\Key -I..\User\SysTick -I..\User\Usart -I..\User\SPI -I..\User\ADC -I..\User\GeneralTimer_3 -I..\User\BaseTimer_6 -I..\User\Encoder -I..\User\Hardware_I2C -I..\User\Simulation_I2C-I d:\001_Main\006_STM32_Stalib_EleDesignCom\Project\RTE-I D:\017_Keil_MDK-ARM_V5.26\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-I D:\017_Keil_MDK-ARM_V5.26\ARM\CMSIS\Include-D__UVISION_VERSION="514" -DSTM32F10X_HD -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o ..\output\hardware_i2c.o --omf_browse ..\output\hardware_i2c.crf --depend ..\output\hardware_i2c.d)
+F (..\User\Hardware_I2C\Hardware_I2C.c)(0x60D7283C)(--c99 -c --cpu Cortex-M3 -D__EVAL -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I..\Libraries\CMSIS -I..\Libraries\STM32F10x_StdPeriph_Driver\inc -I..\User\Main -I..\User\Buzzer -I..\User\Exti -I..\User\Key -I..\User\SysTick -I..\User\Usart -I..\User\SPI -I..\User\ADC -I..\User\GeneralTimer_3 -I..\User\BaseTimer_6 -I..\User\Encoder -I..\User\Hardware_I2C -I..\User\Simulation_I2C-I d:\001_Main\006_STM32_Stalib_EleDesignCom\Project\RTE-I D:\017_Keil_MDK-ARM_V5.26\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-I D:\017_Keil_MDK-ARM_V5.26\ARM\CMSIS\Include-D__UVISION_VERSION="514" -DSTM32F10X_HD -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o ..\output\hardware_i2c.o --omf_browse ..\output\hardware_i2c.crf --depend ..\output\hardware_i2c.d)
 I (..\User\Hardware_I2C\Hardware_I2C.h)(0x60D72620)
 I (..\Libraries\CMSIS\stm32f10x.h)(0x60B0EE5F)
 I (..\Libraries\CMSIS\core_cm3.h)(0x60B0EE5F)
@@ -1136,4 +1137,4 @@ I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_tim.h)(0x60B0EE5F)
 I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_usart.h)(0x60B0EE5F)
 I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_wwdg.h)(0x60B0EE5F)
 I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\misc.h)(0x60B0EE5F)
-F (..\Doc\工程说明.txt)(0x60D6A07D)()
+F (..\Doc\工程说明.txt)(0x60D7297A)()
