@@ -24,11 +24,13 @@
 #include "GeneralTimer_3.h"
 #include "BaseTimer_6.h"
 #include "Encoder.h"
+#include "MPU6050.h"
 
 
 int main(void)
 {
-    BUZZER_GPIO_Config();
+	delay_init(72);
+	BUZZER_GPIO_Config();
     EXTI_Key_Config();
     Key_GPIO_Config();
     SysTick_Init();
@@ -41,9 +43,13 @@ int main(void)
     I2C_EE_Init();
     SPI_FLASH_Init();
     I2C_EE_Config();
+	IIC_Init();
+	MPU6050_initialize();
+	DMP_Init();	
     while(1)
     {
-        
+		Read_DMP();
+		printf ("Pitch=%f \n",Pitch);
     }
 }
 

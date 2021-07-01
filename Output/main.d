@@ -41,3 +41,17 @@
 ..\output\main.o: ..\User\GeneralTimer_3\GeneralTimer_3.h
 ..\output\main.o: ..\User\BaseTimer_6\BaseTimer_6.h
 ..\output\main.o: ..\User\Encoder\Encoder.h
+..\output\main.o: ..\User\MPU6050\MPU6050\MPU6050.h
+..\output\main.o: ..\User\MPU6050\System\System.h
+..\output\main.o: ..\User\MPU6050\Delay\Delay.h
+..\output\main.o: ..\User\MPU6050\System\System.h
+..\output\main.o: ..\User\MPU6050\Timer\timer.h
+..\output\main.o: ..\User\MPU6050\IIC\IIC.h
+..\output\main.o: ..\User\MPU6050\MPU6050\mpu6050.h
+..\output\main.o: ..\User\MPU6050\DMP\inv_mpu.h
+..\output\main.o: ..\User\MPU6050\DMP\inv_mpu_dmp_motion_driver.h
+..\output\main.o: ..\User\MPU6050\DMP\dmpKey.h
+..\output\main.o: ..\User\MPU6050\DMP\dmpmap.h
+..\output\main.o: D:\017_Keil_MDK-ARM_V5.26\ARM\ARMCC\Bin\..\include\string.h
+..\output\main.o: D:\017_Keil_MDK-ARM_V5.26\ARM\ARMCC\Bin\..\include\stdlib.h
+..\output\main.o: D:\017_Keil_MDK-ARM_V5.26\ARM\ARMCC\Bin\..\include\math.h

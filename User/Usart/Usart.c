@@ -1,6 +1,6 @@
 /*
 @Flie：串口通讯
-@Hardware connection：取决于使用的具体是串口几
+@Hardware connection：取决于使用的具体是串口几；
 @Program call：
 				while(1)
 				{

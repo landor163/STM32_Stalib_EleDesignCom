@@ -370,7 +370,7 @@
               <MiscControls></MiscControls>
               <Define>STM32F10X_HD,USE_STDPERIPH_DRIVER</Define>
               <Undefine></Undefine>
-              <IncludePath>..\Libraries\CMSIS;..\Libraries\STM32F10x_StdPeriph_Driver\inc;..\User\Main;..\User\Buzzer;..\User\Exti;..\User\Key;..\User\SysTick;..\User\Usart;..\User\SPI;..\User\ADC;..\User\GeneralTimer_3;..\User\BaseTimer_6;..\User\Encoder;..\User\Hardware_I2C;..\User\Simulation_I2C</IncludePath>
+              <IncludePath>..\Libraries\CMSIS;..\Libraries\STM32F10x_StdPeriph_Driver\inc;..\User\Main;..\User\Buzzer;..\User\Exti;..\User\Key;..\User\SysTick;..\User\Usart;..\User\SPI;..\User\ADC;..\User\GeneralTimer_3;..\User\BaseTimer_6;..\User\Encoder;..\User\Hardware_I2C;..\User\Simulation_I2C;..\User\MPU6050\DMP;..\User\MPU6050\Delay;..\User\MPU6050\IIC;..\User\MPU6050\System;..\User\MPU6050\Timer;..\User\MPU6050\MPU6050</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -627,6 +627,41 @@
               <FileName>Simulation_I2C.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\User\Simulation_I2C\Simulation_I2C.c</FilePath>
+            </File>
+            <File>
+              <FileName>inv_mpu.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\User\MPU6050\DMP\inv_mpu.c</FilePath>
+            </File>
+            <File>
+              <FileName>inv_mpu_dmp_motion_driver.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\User\MPU6050\DMP\inv_mpu_dmp_motion_driver.c</FilePath>
+            </File>
+            <File>
+              <FileName>Delay.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\User\MPU6050\Delay\Delay.c</FilePath>
+            </File>
+            <File>
+              <FileName>IIC.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\User\MPU6050\IIC\IIC.c</FilePath>
+            </File>
+            <File>
+              <FileName>System.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\User\MPU6050\System\System.c</FilePath>
+            </File>
+            <File>
+              <FileName>Timer.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\User\MPU6050\Timer\Timer.c</FilePath>
+            </File>
+            <File>
+              <FileName>MPU6050.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\User\MPU6050\MPU6050\MPU6050.c</FilePath>
             </File>
           </Files>
         </Group>
