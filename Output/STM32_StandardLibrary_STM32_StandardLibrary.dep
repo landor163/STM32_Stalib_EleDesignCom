@@ -743,7 +743,7 @@ I (..\User\Encoder\Encoder.h)(0x60D6967B)
 I (..\User\MPU6050\MPU6050\MPU6050.h)(0x60C89D9A)
 I (..\User\MPU6050\System\System.h)(0x60DD2C50)
 I (..\User\MPU6050\Delay\Delay.h)(0x60C89D9A)
-I (..\User\MPU6050\Timer\timer.h)(0x60C89D9A)
+I (..\User\MPU6050\Timer\timer.h)(0x60DD31EC)
 I (..\User\MPU6050\IIC\IIC.h)(0x60C89D9A)
 I (..\User\MPU6050\DMP\inv_mpu.h)(0x60C89D9A)
 I (..\User\MPU6050\DMP\inv_mpu_dmp_motion_driver.h)(0x60C89D9A)
@@ -1149,7 +1149,7 @@ I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_tim.h)(0x60B0EE5F)
 I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_usart.h)(0x60B0EE5F)
 I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_wwdg.h)(0x60B0EE5F)
 I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\misc.h)(0x60B0EE5F)
-F (..\User\MPU6050\DMP\inv_mpu.c)(0x60DD30E9)(--c99 -c --cpu Cortex-M3 -D__EVAL -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I..\Libraries\CMSIS -I..\Libraries\STM32F10x_StdPeriph_Driver\inc -I..\User\Main -I..\User\Buzzer -I..\User\Exti -I..\User\Key -I..\User\SysTick -I..\User\Usart -I..\User\SPI -I..\User\ADC -I..\User\GeneralTimer_3 -I..\User\BaseTimer_6 -I..\User\Encoder -I..\User\Hardware_I2C -I..\User\Simulation_I2C -I..\User\MPU6050\DMP -I..\User\MPU6050\Delay -I..\User\MPU6050\IIC -I..\User\MPU6050\System -I..\User\MPU6050\Timer -I..\User\MPU6050\MPU6050-I d:\001_Main\006_STM32_Stalib_EleDesignCom\Project\RTE-I D:\017_Keil_MDK-ARM_V5.26\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-I D:\017_Keil_MDK-ARM_V5.26\ARM\CMSIS\Include-D__UVISION_VERSION="514" -DSTM32F10X_HD -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o ..\output\inv_mpu.o --omf_browse ..\output\inv_mpu.crf --depend ..\output\inv_mpu.d)
+F (..\User\MPU6050\DMP\inv_mpu.c)(0x60DD311B)(--c99 -c --cpu Cortex-M3 -D__EVAL -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I..\Libraries\CMSIS -I..\Libraries\STM32F10x_StdPeriph_Driver\inc -I..\User\Main -I..\User\Buzzer -I..\User\Exti -I..\User\Key -I..\User\SysTick -I..\User\Usart -I..\User\SPI -I..\User\ADC -I..\User\GeneralTimer_3 -I..\User\BaseTimer_6 -I..\User\Encoder -I..\User\Hardware_I2C -I..\User\Simulation_I2C -I..\User\MPU6050\DMP -I..\User\MPU6050\Delay -I..\User\MPU6050\IIC -I..\User\MPU6050\System -I..\User\MPU6050\Timer -I..\User\MPU6050\MPU6050-I d:\001_Main\006_STM32_Stalib_EleDesignCom\Project\RTE-I D:\017_Keil_MDK-ARM_V5.26\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-I D:\017_Keil_MDK-ARM_V5.26\ARM\CMSIS\Include-D__UVISION_VERSION="514" -DSTM32F10X_HD -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o ..\output\inv_mpu.o --omf_browse ..\output\inv_mpu.crf --depend ..\output\inv_mpu.d)
 I (..\User\MPU6050\System\System.h)(0x60DD2C50)
 I (..\Libraries\CMSIS\stm32f10x.h)(0x60B0EE5F)
 I (..\Libraries\CMSIS\core_cm3.h)(0x60B0EE5F)
@@ -1182,7 +1182,7 @@ I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\misc.h)(0x60B0EE5F)
 I (..\User\MPU6050\Delay\Delay.h)(0x60C89D9A)
 I (..\User\Usart\Usart.h)(0x60D57BF4)
 I (D:\017_Keil_MDK-ARM_V5.26\ARM\ARMCC\include\stdio.h)(0x599EDB3C)
-I (..\User\MPU6050\Timer\timer.h)(0x60C89D9A)
+I (..\User\MPU6050\Timer\timer.h)(0x60DD31EC)
 I (..\User\MPU6050\IIC\IIC.h)(0x60C89D9A)
 I (..\User\MPU6050\MPU6050\mpu6050.h)(0x60C89D9A)
 I (..\User\MPU6050\DMP\inv_mpu.h)(0x60C89D9A)
@@ -1192,7 +1192,7 @@ I (..\User\MPU6050\DMP\dmpmap.h)(0x60C89D9A)
 I (D:\017_Keil_MDK-ARM_V5.26\ARM\ARMCC\include\string.h)(0x599EDB3C)
 I (D:\017_Keil_MDK-ARM_V5.26\ARM\ARMCC\include\stdlib.h)(0x599EDB3C)
 I (D:\017_Keil_MDK-ARM_V5.26\ARM\ARMCC\include\math.h)(0x599EDB3E)
-F (..\User\MPU6050\DMP\inv_mpu_dmp_motion_driver.c)(0x60C89D9A)(--c99 -c --cpu Cortex-M3 -D__EVAL -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I..\Libraries\CMSIS -I..\Libraries\STM32F10x_StdPeriph_Driver\inc -I..\User\Main -I..\User\Buzzer -I..\User\Exti -I..\User\Key -I..\User\SysTick -I..\User\Usart -I..\User\SPI -I..\User\ADC -I..\User\GeneralTimer_3 -I..\User\BaseTimer_6 -I..\User\Encoder -I..\User\Hardware_I2C -I..\User\Simulation_I2C -I..\User\MPU6050\DMP -I..\User\MPU6050\Delay -I..\User\MPU6050\IIC -I..\User\MPU6050\System -I..\User\MPU6050\Timer -I..\User\MPU6050\MPU6050-I d:\001_Main\006_STM32_Stalib_EleDesignCom\Project\RTE-I D:\017_Keil_MDK-ARM_V5.26\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-I D:\017_Keil_MDK-ARM_V5.26\ARM\CMSIS\Include-D__UVISION_VERSION="514" -DSTM32F10X_HD -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o ..\output\inv_mpu_dmp_motion_driver.o --omf_browse ..\output\inv_mpu_dmp_motion_driver.crf --depend ..\output\inv_mpu_dmp_motion_driver.d)
+F (..\User\MPU6050\DMP\inv_mpu_dmp_motion_driver.c)(0x60DD318F)(--c99 -c --cpu Cortex-M3 -D__EVAL -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I..\Libraries\CMSIS -I..\Libraries\STM32F10x_StdPeriph_Driver\inc -I..\User\Main -I..\User\Buzzer -I..\User\Exti -I..\User\Key -I..\User\SysTick -I..\User\Usart -I..\User\SPI -I..\User\ADC -I..\User\GeneralTimer_3 -I..\User\BaseTimer_6 -I..\User\Encoder -I..\User\Hardware_I2C -I..\User\Simulation_I2C -I..\User\MPU6050\DMP -I..\User\MPU6050\Delay -I..\User\MPU6050\IIC -I..\User\MPU6050\System -I..\User\MPU6050\Timer -I..\User\MPU6050\MPU6050-I d:\001_Main\006_STM32_Stalib_EleDesignCom\Project\RTE-I D:\017_Keil_MDK-ARM_V5.26\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-I D:\017_Keil_MDK-ARM_V5.26\ARM\CMSIS\Include-D__UVISION_VERSION="514" -DSTM32F10X_HD -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o ..\output\inv_mpu_dmp_motion_driver.o --omf_browse ..\output\inv_mpu_dmp_motion_driver.crf --depend ..\output\inv_mpu_dmp_motion_driver.d)
 I (..\User\MPU6050\System\System.h)(0x60DD2C50)
 I (..\Libraries\CMSIS\stm32f10x.h)(0x60B0EE5F)
 I (..\Libraries\CMSIS\core_cm3.h)(0x60B0EE5F)
@@ -1225,7 +1225,7 @@ I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\misc.h)(0x60B0EE5F)
 I (..\User\MPU6050\Delay\Delay.h)(0x60C89D9A)
 I (..\User\Usart\Usart.h)(0x60D57BF4)
 I (D:\017_Keil_MDK-ARM_V5.26\ARM\ARMCC\include\stdio.h)(0x599EDB3C)
-I (..\User\MPU6050\Timer\timer.h)(0x60C89D9A)
+I (..\User\MPU6050\Timer\timer.h)(0x60DD31EC)
 I (..\User\MPU6050\IIC\IIC.h)(0x60C89D9A)
 I (..\User\MPU6050\MPU6050\mpu6050.h)(0x60C89D9A)
 I (..\User\MPU6050\DMP\inv_mpu.h)(0x60C89D9A)
@@ -1268,7 +1268,7 @@ I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_wwdg.h)(0x60B0EE5F)
 I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\misc.h)(0x60B0EE5F)
 I (..\User\Usart\Usart.h)(0x60D57BF4)
 I (D:\017_Keil_MDK-ARM_V5.26\ARM\ARMCC\include\stdio.h)(0x599EDB3C)
-I (..\User\MPU6050\Timer\timer.h)(0x60C89D9A)
+I (..\User\MPU6050\Timer\timer.h)(0x60DD31EC)
 I (..\User\MPU6050\IIC\IIC.h)(0x60C89D9A)
 I (..\User\MPU6050\MPU6050\mpu6050.h)(0x60C89D9A)
 I (..\User\MPU6050\DMP\inv_mpu.h)(0x60C89D9A)
@@ -1312,7 +1312,7 @@ I (..\User\MPU6050\System\System.h)(0x60DD2C50)
 I (..\User\MPU6050\Delay\Delay.h)(0x60C89D9A)
 I (..\User\Usart\Usart.h)(0x60D57BF4)
 I (D:\017_Keil_MDK-ARM_V5.26\ARM\ARMCC\include\stdio.h)(0x599EDB3C)
-I (..\User\MPU6050\Timer\timer.h)(0x60C89D9A)
+I (..\User\MPU6050\Timer\timer.h)(0x60DD31EC)
 I (..\User\MPU6050\MPU6050\mpu6050.h)(0x60C89D9A)
 I (..\User\MPU6050\DMP\inv_mpu.h)(0x60C89D9A)
 I (..\User\MPU6050\DMP\inv_mpu_dmp_motion_driver.h)(0x60C89D9A)
@@ -1354,7 +1354,7 @@ I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\misc.h)(0x60B0EE5F)
 I (..\User\MPU6050\Delay\Delay.h)(0x60C89D9A)
 I (..\User\Usart\Usart.h)(0x60D57BF4)
 I (D:\017_Keil_MDK-ARM_V5.26\ARM\ARMCC\include\stdio.h)(0x599EDB3C)
-I (..\User\MPU6050\Timer\timer.h)(0x60C89D9A)
+I (..\User\MPU6050\Timer\timer.h)(0x60DD31EC)
 I (..\User\MPU6050\IIC\IIC.h)(0x60C89D9A)
 I (..\User\MPU6050\MPU6050\mpu6050.h)(0x60C89D9A)
 I (..\User\MPU6050\DMP\inv_mpu.h)(0x60C89D9A)
@@ -1364,8 +1364,8 @@ I (..\User\MPU6050\DMP\dmpmap.h)(0x60C89D9A)
 I (D:\017_Keil_MDK-ARM_V5.26\ARM\ARMCC\include\string.h)(0x599EDB3C)
 I (D:\017_Keil_MDK-ARM_V5.26\ARM\ARMCC\include\stdlib.h)(0x599EDB3C)
 I (D:\017_Keil_MDK-ARM_V5.26\ARM\ARMCC\include\math.h)(0x599EDB3E)
-F (..\User\MPU6050\Timer\Timer.c)(0x60C89D9A)(--c99 -c --cpu Cortex-M3 -D__EVAL -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I..\Libraries\CMSIS -I..\Libraries\STM32F10x_StdPeriph_Driver\inc -I..\User\Main -I..\User\Buzzer -I..\User\Exti -I..\User\Key -I..\User\SysTick -I..\User\Usart -I..\User\SPI -I..\User\ADC -I..\User\GeneralTimer_3 -I..\User\BaseTimer_6 -I..\User\Encoder -I..\User\Hardware_I2C -I..\User\Simulation_I2C -I..\User\MPU6050\DMP -I..\User\MPU6050\Delay -I..\User\MPU6050\IIC -I..\User\MPU6050\System -I..\User\MPU6050\Timer -I..\User\MPU6050\MPU6050-I d:\001_Main\006_STM32_Stalib_EleDesignCom\Project\RTE-I D:\017_Keil_MDK-ARM_V5.26\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-I D:\017_Keil_MDK-ARM_V5.26\ARM\CMSIS\Include-D__UVISION_VERSION="514" -DSTM32F10X_HD -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o ..\output\timer.o --omf_browse ..\output\timer.crf --depend ..\output\timer.d)
-I (..\User\MPU6050\Timer\timer.h)(0x60C89D9A)
+F (..\User\MPU6050\Timer\Timer.c)(0x60DD31D2)(--c99 -c --cpu Cortex-M3 -D__EVAL -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I..\Libraries\CMSIS -I..\Libraries\STM32F10x_StdPeriph_Driver\inc -I..\User\Main -I..\User\Buzzer -I..\User\Exti -I..\User\Key -I..\User\SysTick -I..\User\Usart -I..\User\SPI -I..\User\ADC -I..\User\GeneralTimer_3 -I..\User\BaseTimer_6 -I..\User\Encoder -I..\User\Hardware_I2C -I..\User\Simulation_I2C -I..\User\MPU6050\DMP -I..\User\MPU6050\Delay -I..\User\MPU6050\IIC -I..\User\MPU6050\System -I..\User\MPU6050\Timer -I..\User\MPU6050\MPU6050-I d:\001_Main\006_STM32_Stalib_EleDesignCom\Project\RTE-I D:\017_Keil_MDK-ARM_V5.26\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-I D:\017_Keil_MDK-ARM_V5.26\ARM\CMSIS\Include-D__UVISION_VERSION="514" -DSTM32F10X_HD -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o ..\output\timer.o --omf_browse ..\output\timer.crf --depend ..\output\timer.d)
+I (..\User\MPU6050\Timer\timer.h)(0x60DD31EC)
 I (..\User\MPU6050\System\System.h)(0x60DD2C50)
 I (..\Libraries\CMSIS\stm32f10x.h)(0x60B0EE5F)
 I (..\Libraries\CMSIS\core_cm3.h)(0x60B0EE5F)
@@ -1441,7 +1441,7 @@ I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\misc.h)(0x60B0EE5F)
 I (..\User\MPU6050\Delay\Delay.h)(0x60C89D9A)
 I (..\User\Usart\Usart.h)(0x60D57BF4)
 I (D:\017_Keil_MDK-ARM_V5.26\ARM\ARMCC\include\stdio.h)(0x599EDB3C)
-I (..\User\MPU6050\Timer\timer.h)(0x60C89D9A)
+I (..\User\MPU6050\Timer\timer.h)(0x60DD31EC)
 I (..\User\MPU6050\IIC\IIC.h)(0x60C89D9A)
 I (..\User\MPU6050\DMP\inv_mpu.h)(0x60C89D9A)
 I (..\User\MPU6050\DMP\inv_mpu_dmp_motion_driver.h)(0x60C89D9A)
@@ -1450,4 +1450,4 @@ I (..\User\MPU6050\DMP\dmpmap.h)(0x60C89D9A)
 I (D:\017_Keil_MDK-ARM_V5.26\ARM\ARMCC\include\string.h)(0x599EDB3C)
 I (D:\017_Keil_MDK-ARM_V5.26\ARM\ARMCC\include\stdlib.h)(0x599EDB3C)
 I (D:\017_Keil_MDK-ARM_V5.26\ARM\ARMCC\include\math.h)(0x599EDB3E)
-F (..\Doc\工程说明.txt)(0x60DD24B0)()
+F (..\Doc\工程说明.txt)(0x60DD3160)()

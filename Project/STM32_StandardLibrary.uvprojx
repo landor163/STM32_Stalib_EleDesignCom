@@ -370,7 +370,7 @@
               <MiscControls></MiscControls>
               <Define>STM32F10X_HD,USE_STDPERIPH_DRIVER</Define>
               <Undefine></Undefine>
-              <IncludePath>..\Libraries\CMSIS;..\Libraries\STM32F10x_StdPeriph_Driver\inc;..\User\Main;..\User\Buzzer;..\User\Exti;..\User\Key;..\User\SysTick;..\User\Usart;..\User\SPI;..\User\ADC;..\User\GeneralTimer_3;..\User\BaseTimer_6;..\User\Encoder;..\User\Hardware_I2C;..\User\Simulation_I2C;..\User\MPU6050\DMP;..\User\MPU6050\Delay;..\User\MPU6050\IIC;..\User\MPU6050\System;..\User\MPU6050\Timer;..\User\MPU6050\MPU6050</IncludePath>
+              <IncludePath>..\Libraries\CMSIS;..\Libraries\STM32F10x_StdPeriph_Driver\inc;..\User\Main;..\User\Buzzer;..\User\Exti;..\User\Key;..\User\SysTick;..\User\Usart;..\User\SPI;..\User\ADC;..\User\GeneralTimer_3;..\User\BaseTimer_6;..\User\Encoder;..\User\Hardware_I2C;..\User\Simulation_I2C;..\User\MPU6050\DMP;..\User\MPU6050\Delay;..\User\MPU6050\IIC;..\User\MPU6050\System;..\User\MPU6050\Timer;..\User\MPU6050\MPU6050;..\User\Find_Num</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -662,6 +662,11 @@
               <FileName>MPU6050.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\User\MPU6050\MPU6050\MPU6050.c</FilePath>
+            </File>
+            <File>
+              <FileName>Find_Num.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\User\Find_Num\Find_Num.c</FilePath>
             </File>
           </Files>
         </Group>
