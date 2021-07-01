@@ -25,6 +25,7 @@
 #include "BaseTimer_6.h"
 #include "Encoder.h"
 #include "MPU6050.h"
+#include "Find_Num.h"
 
 
 int main(void)

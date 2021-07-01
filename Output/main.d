@@ -55,3 +55,4 @@
 ..\output\main.o: D:\017_Keil_MDK-ARM_V5.26\ARM\ARMCC\Bin\..\include\string.h
 ..\output\main.o: D:\017_Keil_MDK-ARM_V5.26\ARM\ARMCC\Bin\..\include\stdlib.h
 ..\output\main.o: D:\017_Keil_MDK-ARM_V5.26\ARM\ARMCC\Bin\..\include\math.h
+..\output\main.o: ..\User\Find_Num\Find_Num.h
