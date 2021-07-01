@@ -40,9 +40,10 @@ int main(void)
     Encoder_Init_TIM4();
     I2C_EE_Init();
     SPI_FLASH_Init();
+    I2C_EE_Config();
     while(1)
     {
-
+        
     }
 }
 
