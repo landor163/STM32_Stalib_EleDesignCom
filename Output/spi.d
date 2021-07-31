@@ -2,7 +2,7 @@
 ..\output\spi.o: ..\User\SPI\SPI.h
 ..\output\spi.o: ..\Libraries\CMSIS\stm32f10x.h
 ..\output\spi.o: ..\Libraries\CMSIS\core_cm3.h
-..\output\spi.o: D:\017_Keil_MDK-ARM_V5.26\ARM\ARMCC\Bin\..\include\stdint.h
+..\output\spi.o: C:\003_Professional Software\002_Keil MDK-ARM\ARM\ARMCC\Bin\..\include\stdint.h
 ..\output\spi.o: ..\Libraries\CMSIS\system_stm32f10x.h
 ..\output\spi.o: ..\User\Main\stm32f10x_conf.h
 ..\output\spi.o: ..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_adc.h
@@ -29,4 +29,4 @@
 ..\output\spi.o: ..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_usart.h
 ..\output\spi.o: ..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_wwdg.h
 ..\output\spi.o: ..\Libraries\STM32F10x_StdPeriph_Driver\inc\misc.h
-..\output\spi.o: D:\017_Keil_MDK-ARM_V5.26\ARM\ARMCC\Bin\..\include\stdio.h
+..\output\spi.o: C:\003_Professional Software\002_Keil MDK-ARM\ARM\ARMCC\Bin\..\include\stdio.h

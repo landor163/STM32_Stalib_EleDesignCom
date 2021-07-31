@@ -10,7 +10,6 @@
 @Date：2021年6月19日
 */
 
-//测试github密钥
 
 #include "stm32f10x.h"
 #include "Buzzer.h"

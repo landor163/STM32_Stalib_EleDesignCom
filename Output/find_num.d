@@ -2,7 +2,7 @@
 ..\output\find_num.o: ..\User\Find_Num\Find_Num.h
 ..\output\find_num.o: ..\Libraries\CMSIS\stm32f10x.h
 ..\output\find_num.o: ..\Libraries\CMSIS\core_cm3.h
-..\output\find_num.o: D:\017_Keil_MDK-ARM_V5.26\ARM\ARMCC\Bin\..\include\stdint.h
+..\output\find_num.o: C:\003_Professional Software\002_Keil MDK-ARM\ARM\ARMCC\Bin\..\include\stdint.h
 ..\output\find_num.o: ..\Libraries\CMSIS\system_stm32f10x.h
 ..\output\find_num.o: ..\User\Main\stm32f10x_conf.h
 ..\output\find_num.o: ..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_adc.h
